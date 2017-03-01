@@ -37,6 +37,10 @@ export default class Layout extends React.Component {
     foundToDo.task = newTask;
     this.setState({ todos: this.state.todos });
   }
+  deleteTask(taskToDelete){
+    _.remove(this.state.todos, todo => todo.task === taskToDelete);
+    this.setState({ todos: this.state.todos });
+  }
   render() {
     return (
       <div>
@@ -46,6 +50,7 @@ export default class Layout extends React.Component {
           createTask={ this.createTask.bind(this) }
           toggleTask={ this.toggleTask.bind(this)}
           saveTask={ this.saveTask.bind(this) }
+          deleteTask={ this.deleteTask.bind(this) }
         />
         <Footer />
       </div>
