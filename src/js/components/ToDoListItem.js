@@ -14,12 +14,40 @@ export default class ToDoListItem extends React.Component {
   onCancelClick(){
     this.setState({ isEditing: false })
   }
+  renderTaskSection(){
+    const { task, isComplete } = this.props;
+    const taskStyle = {
+      textDecorationLine: isComplete ? "line-through" : "none",
+      color: isComplete ? "green" : "red",
+      cursor: "pointer"
+    }
+    if(this.state.isEditing){
+      return(
+        <form onSubmit={ this.onSaveClick.bind(this) }>
+          <input type="text" defaultValue={task} ref="editInput" />
+        </form>
+      )
+    }
+    return(
+      <div style={ taskStyle }
+        onClick={this.props.toggleTask.bind(this, task)}>
+        { task }
+      </div>
+    );
+  }
+  onSaveClick(e){
+    e.preventDefault();
+    const oldTask = this.props.task;
+    const newTask = this.refs.editInput.value;
+    this.props.saveTask(oldTask, newTask);
+    this.setState({ isEditing: false });
+  }
   renderActionsSection(){
     if(this.state.isEditing){
       return(
         <div>
-          <button class="save">Save</button>
-          <button onClick={this.onCancelClick.bind(this)} class="cancel">Cancel</button>
+          <button onClick= { this.onSaveClick.bind(this) } class="save">Save</button>
+          <button onClick={ this.onCancelClick.bind(this) } class="cancel">Cancel</button>
         </div>
       );
     }
@@ -33,7 +61,7 @@ export default class ToDoListItem extends React.Component {
   render() {
     return (
       <div class="ToDoListItem">
-        <div>{ this.props.task }</div>
+        { this.renderTaskSection() }
         { this.renderActionsSection() }
       </div>
   )}

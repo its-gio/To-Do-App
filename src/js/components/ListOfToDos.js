@@ -6,7 +6,8 @@ import CreateToDo from './CreateToDo'
 
 export default class ListOfToDos extends React.Component {
   renderItem() {
-    return _.map(this.props.todos, (todos, i) => <ToDoListItem key={ i } {...todos} />);
+    const props = _.omit(this.props, "todos");
+    return _.map(this.props.todos, (todos, i) => <ToDoListItem key={ i } {...todos} {...props} />);
   }
   render() {
     return (

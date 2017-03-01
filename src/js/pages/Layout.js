@@ -27,6 +27,16 @@ export default class Layout extends React.Component {
     });
     this.setState({ todos: this.state.todos});
   }
+  toggleTask(task){
+    const foundToDo = _.find(this.state.todos, todo => todo.task === task);
+    foundToDo.isComplete = !foundToDo.isComplete;
+    this.setState({ todos: this.state.todos });
+  }
+  saveTask(oldTask, newTask){
+    const foundToDo = _.find(this.state.todos, todo => todo.task === oldTask);
+    foundToDo.task = newTask;
+    this.setState({ todos: this.state.todos });
+  }
   render() {
     return (
       <div>
@@ -34,6 +44,8 @@ export default class Layout extends React.Component {
         <ListOfToDos
           todos={ this.state.todos }
           createTask={ this.createTask.bind(this) }
+          toggleTask={ this.toggleTask.bind(this)}
+          saveTask={ this.saveTask.bind(this) }
         />
         <Footer />
       </div>
