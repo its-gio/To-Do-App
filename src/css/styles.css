@@ -1,0 +1,59 @@
+body, html{
+  background: #EEE;
+  color: #444;
+  text-align: center;
+  margin: 0;
+}
+header > div, footer > div{
+  flex: 1;
+}
+header, footer{
+  display: flex;
+}
+.Home button, .prompt button{
+  padding: 10px 20px;
+  border: none;
+  color: #FFF;
+  background: #2A3;
+  border-radius: 5px;
+}
+header a{
+  color: #444;
+}
+form div{
+  padding: 5px;
+}
+form input[type="text"]{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px #CCC solid;
+  background: #EEE;
+}
+.ToDoListItem button{
+  max-width: 75px;
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+}
+.edit, .delete{
+  font-weight: bold;
+  -webkit-transition: all .6s ease; /* Safari */
+  transition: all .6s ease;
+}
+.edit:hover{
+  background: orange;
+  color: white;
+}
+.delete:hover{
+  background: red;
+  color: white;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+  font-size: 12px;
+}
