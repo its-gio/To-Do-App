@@ -20,11 +20,21 @@ export default class Layout extends React.Component {
     super(props);
     this.state = { todos: todos }
   }
+  createTask(task){
+    this.state.todos.push({
+      task: task,
+      isComplete: false
+    });
+    this.setState({ todos: this.state.todos});
+  }
   render() {
     return (
       <div>
         <Header />
-        <ListOfToDos todos={ this.state.todos } />
+        <ListOfToDos
+          todos={ this.state.todos }
+          createTask={ this.createTask.bind(this) }
+        />
         <Footer />
       </div>
   )}

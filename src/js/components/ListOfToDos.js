@@ -2,6 +2,7 @@ import _ from "lodash";
 import React from "react";
 
 import ToDoListItem from './ToDoListItem'
+import CreateToDo from './CreateToDo'
 
 export default class ListOfToDos extends React.Component {
   renderItem() {
@@ -10,6 +11,7 @@ export default class ListOfToDos extends React.Component {
   render() {
     return (
       <div>
+        <CreateToDo createTask={this.props.createTask}/>
         { this.renderItem() }
       </div>
   )}
