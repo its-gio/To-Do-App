@@ -11,7 +11,7 @@ export default class ListOfToDos extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div class="Home">
         <CreateToDo todos={this.props.todos} createTask={this.props.createTask}/>
         { this.renderItem() }
       </div>
