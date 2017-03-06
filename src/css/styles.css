@@ -10,7 +10,7 @@ header > div, footer > div{
 header, footer{
   display: flex;
 }
-.Home button, .prompt button{
+.prompt button{
   padding: 10px 20px;
   border: none;
   color: #FFF;
@@ -19,6 +19,10 @@ header, footer{
 }
 header a{
   color: #444;
+}
+.Home {
+  max-height: 540px;
+  overflow: auto;
 }
 form div{
   padding: 5px;
