@@ -1,41 +1,25 @@
 {
   "name": "To-Do-App",
-  "version": "1.0.0",
-  "main": "webpack.config.js",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "scripts": {
-    "dev": "webpack-dev-server --content-base src --inline --hot",
-    "build": "webpack -p"
-  },
+  "version": "1.1.0",
+  "private": true,
   "dependencies": {
-    "lodash": "^4.17.4",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
   },
-  "devDependencies": {
-    "babel-core": "^6.7.6",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-react-html-attrs": "^2.0.0",
-    "babel-plugin-transform-class-properties": "^6.11.5",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1",
-    "babel-preset-stage-0": "^6.5.0",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "html-webpack-plugin": "^2.22.0",
-    "webpack": "^1.13.1",
-    "webpack-dev-server": "^1.14.1"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Gio-aguirre19/To-Do-App.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "bugs": {
-    "url": "https://github.com/Gio-aguirre19/To-Do-App/issues"
-  },
-  "homepage": "https://github.com/Gio-aguirre19/To-Do-App#readme"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
