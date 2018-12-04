@@ -16,8 +16,7 @@ input {
   vertical-align: bottom;
   position: relative;
   top: -2px;
-}
-
-input:hover {
-  cursor: pointer;
+  &:hover {
+    cursor: pointer;
+  }
 }
