@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 
+import ToDoItem from "./components/ToDoItem";
+
 class App extends Component {
   render() {
     return (
       <form>
-        <input type="checkbox" />
-        <span>Milk</span>
-        <input type="checkbox" />
-        <span>Milk</span>
-        <input type="checkbox" />
-        <span>Milk</span>
+        <ToDoItem />
       </form>
     );
   }
