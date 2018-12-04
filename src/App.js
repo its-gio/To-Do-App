@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 
-import ToDoItem from "./components/ToDoItem";
+import TodoItem from "./components/TodoItem";
 
 class App extends Component {
   render() {
     return (
-      <form>
-        <ToDoItem />
+      <form className="todo-list">
+        <TodoItem />
       </form>
     );
   }
