@@ -17,7 +17,7 @@
 
 .todo-item {
   align-items: center;
-  padding: 30px 20px 0;
+  padding: 0 15px;
   width: auto;
   font-family: Roboto, sans-serif;
   font-weight: 100;
@@ -26,6 +26,7 @@
   display: initial;
   padding-left: 15px;
   text-indent: -15px;
+  user-select: none;
 
   &:hover {
     cursor: pointer;
