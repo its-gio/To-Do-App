@@ -5,7 +5,7 @@ class TodoItem extends Component {
     return (
       <label className="todo-item">
         <input className="todo-item__checkbox" type="checkbox" />
-        Milk
+        {this.props.text}
         <hr className="todo-item__hr" />
       </label>
     );
