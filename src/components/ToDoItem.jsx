@@ -11,7 +11,6 @@ class TodoItem extends Component {
           onChange={() => this.props.changeComplete(this.props.id)}
         />
         {this.props.text}
-        <hr className="todo-item__hr" />
       </label>
     );
   }

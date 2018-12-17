@@ -16,24 +16,23 @@
 }
 
 .todo-item {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: 0 15px;
-  width: auto;
+  padding: 30px 0 20px 0;
+  width: 70%;
+  border-bottom: 1px solid #cecece;
   font-family: Roboto, sans-serif;
   font-weight: 100;
   font-size: 15px;
   color: #333333;
-  display: initial;
-  padding-left: 15px;
-  text-indent: -15px;
-  user-select: none;
 
   &:hover {
     cursor: pointer;
   }
 
   &__checkbox {
-    width: 13px;
+    min-width: 13px;
     height: 13px;
     padding: 0;
     margin: 0 2px 0 0;
@@ -43,9 +42,5 @@
     &:hover {
       cursor: pointer;
     }
-  }
-
-  &__hr {
-    max-width: 25px;
   }
 }
