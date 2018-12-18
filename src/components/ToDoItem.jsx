@@ -10,7 +10,11 @@ class TodoItem extends Component {
           checked={this.props.completed}
           onChange={() => this.props.changeComplete(this.props.id)}
         />
-        {this.props.text}
+        <p
+          className={`todo-item__content ${this.props.completed && "checked"}`}
+        >
+          {this.props.text}
+        </p>
       </label>
     );
   }

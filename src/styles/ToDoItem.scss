@@ -35,12 +35,22 @@
     min-width: 13px;
     height: 13px;
     padding: 0;
-    margin: 0 2px 0 0;
+    margin: 6px 2px 0 0;
     vertical-align: bottom;
     position: relative;
     top: -3px;
     &:hover {
       cursor: pointer;
     }
+  }
+
+  &__content {
+    margin: 0;
+  }
+
+  &__content.checked {
+    font-style: italic;
+    color: #cdcdcd;
+    text-decoration: line-through;
   }
 }
