@@ -68,7 +68,8 @@ class Form extends Component {
         />
         Other... */}
         <legend>Destination To:</legend>
-        <select name="locationTo" type="text" placeholder="Location To...">
+        <select name="locationTo" onChange={this.props.updateForm}>
+          <option value="" />
           <option value="Los Angeles, CA">Los Angeles, CA</option>
           <option value="San Fransisco, CA">San Fransisco, CA</option>
           <option value="Austin, TX">Austin, TX</option>
