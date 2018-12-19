@@ -11,7 +11,7 @@ class App extends Component {
       todos: todoList,
       firstName: "",
       lastName: "",
-      age: 0,
+      age: 18,
       gender: "",
       locationFrom: "",
       locationTo: "",
@@ -48,7 +48,7 @@ class App extends Component {
     return (
       <div>
         <form className="todo-list">{todoItems}</form>
-        <Form />
+        <Form info={this.state} />
       </div>
     );
   }
