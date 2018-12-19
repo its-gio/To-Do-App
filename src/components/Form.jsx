@@ -59,20 +59,53 @@ class Form extends Component {
           />
           Female
         </label>
-        {/* <input
-          onChange={this.props.updateForm}
-          checked={gender == }
-          name="gender"
-          type="radio"
-          value="other"
-        />
-        Other... */}
-        <legend>Destination To:</legend>
-        <select name="locationTo" onChange={this.props.updateForm}>
+        {/* <label>
+          <input
+            onChange={this.props.updateForm}
+            checked={gender === "other"}
+            name="gender"
+            type="radio"
+            value="other"
+          />
+          <input type="text" placeholder="Other..." />
+        </label> */}
+        <legend>Destination From:</legend>
+        <select name="locationFrom">
           <option value="" />
-          <option value="Los Angeles, CA">Los Angeles, CA</option>
-          <option value="San Fransisco, CA">San Fransisco, CA</option>
-          <option value="Austin, TX">Austin, TX</option>
+          <option
+            disabled={locationFrom === locationTo}
+            value="Los Angeles, CA"
+          >
+            Los Angeles, CA
+          </option>
+          <option
+            disabled={locationFrom === locationTo}
+            value="San Fransisco, CA"
+          >
+            San Fransisco, CA
+          </option>
+          <option disabled={locationFrom === locationTo} value="Austin, TX">
+            Austin, TX
+          </option>
+        </select>
+        <legend>Destination To:</legend>
+        <select name="locationTo">
+          <option value="" />
+          <option
+            disabled={locationTo === locationFrom}
+            value="Los Angeles, CA"
+          >
+            Los Angeles, CA
+          </option>
+          <option
+            disabled={locationTo === locationFrom}
+            value="San Fransisco, CA"
+          >
+            San Fransisco, CA
+          </option>
+          <option disabled={locationTo === locationFrom} value="Austin, TX">
+            Austin, TX
+          </option>
         </select>
         <legend>Diet Restrictions:</legend>
         <label>
