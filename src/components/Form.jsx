@@ -73,42 +73,41 @@ class Form extends Component {
         </label> */}
 
         <legend>Destination From:</legend>
-        <select name="locationFrom">
+        <select onChange={this.props.updateForm} name="locationFrom">
+          <option value="Nowhere" />
           <option
-            selected
-            disabled={locationFrom === locationTo}
+            disabled={"Los Angeles, CA" === locationTo}
             value="Los Angeles, CA"
           >
             Los Angeles, CA
           </option>
           <option
-            disabled={locationFrom === locationTo}
+            disabled={"San Fransisco, CA" === locationTo}
             value="San Fransisco, CA"
           >
             San Fransisco, CA
           </option>
-          <option disabled={locationFrom === locationTo} value="Austin, TX">
+          <option disabled={"Austin, TX" === locationTo} value="Austin, TX">
             Austin, TX
           </option>
         </select>
 
         <legend>Destination To:</legend>
-        <select name="locationTo">
-          <option value="" />
+        <select onChange={this.props.updateForm} name="locationTo">
+          <option value="Now here" />
           <option
-            disabled={locationTo === locationFrom}
+            disabled={"Los Angeles, CA" === locationFrom}
             value="Los Angeles, CA"
           >
             Los Angeles, CA
           </option>
           <option
-            selected
-            disabled={locationTo === locationFrom}
+            disabled={"San Fransisco, CA" === locationFrom}
             value="San Fransisco, CA"
           >
             San Fransisco, CA
           </option>
-          <option disabled={locationTo === locationFrom} value="Austin, TX">
+          <option disabled={"Austin, TX" === locationFrom} value="Austin, TX">
             Austin, TX
           </option>
         </select>

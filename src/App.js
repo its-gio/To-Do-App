@@ -13,8 +13,8 @@ class App extends Component {
       lastName: "",
       age: 18,
       gender: "",
-      locationFrom: "",
-      locationTo: "",
+      locationFrom: "Nowhere",
+      locationTo: "Now here",
       vegan: false,
       pescetarians: false,
       vegetarian: false
