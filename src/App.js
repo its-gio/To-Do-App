@@ -1,13 +1,21 @@
 import React, { Component } from "react";
 
 import TodoItem from "./components/TodoItem";
+import Form from "./components/Form";
 import todoList from "./data/data.js";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      todos: todoList
+      todos: todoList,
+      firstName: "",
+      lastName: "",
+      age: 0,
+      gender: "",
+      locationFrom: "",
+      locationTo: "",
+      diet: ""
     };
 
     this.changeComplete = this.changeComplete.bind(this);
@@ -37,7 +45,12 @@ class App extends Component {
       />
     ));
 
-    return <form className="todo-list">{todoItems}</form>;
+    return (
+      <div>
+        <form className="todo-list">{todoItems}</form>
+        <Form />
+      </div>
+    );
   }
 }
 
