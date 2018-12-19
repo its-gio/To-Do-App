@@ -38,11 +38,10 @@ class App extends Component {
   }
 
   updateForm(e) {
-    e.preventDefault();
-    const { name, value } = e.target;
-    this.setState({
-      [name]: value
-    });
+    const { name, value, type, checked } = e.target;
+    type === "checkbox"
+      ? this.setState({ [name]: checked })
+      : this.setState({ [name]: value });
   }
 
   render() {

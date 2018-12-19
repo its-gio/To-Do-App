@@ -9,7 +9,9 @@ class Form extends Component {
       gender,
       locationFrom,
       locationTo,
-      diet
+      vegan,
+      pescetarians,
+      vegetarian
     } = this.props.info;
 
     return (
@@ -28,39 +30,62 @@ class Form extends Component {
           type="text"
           placeholder="Last Name..."
         />
-        <legend>
-          Age:
+        <legend>Age:</legend>
+        <input
+          onChange={this.props.updateForm}
+          name="age"
+          type="number"
+          min="18"
+          value={age}
+        />
+        <legend>Gender:</legend>
+        <label>
           <input
             onChange={this.props.updateForm}
-            name="age"
-            type="number"
-            min="18"
-            value={age}
+            checked={gender === "male"}
+            name="gender"
+            type="radio"
+            value="male"
           />
-        </legend>
-        <legend>
-          Gender:
-          <input name="gender" type="radio" value="male" />
           Male
-          <input name="gender" type="radio" value="female" />
+        </label>
+        <label>
+          <input
+            onChange={this.props.updateForm}
+            checked={gender === "female"}
+            name="gender"
+            type="radio"
+            value="female"
+          />
           Female
-          <input name="gender" type="radio" value="other" />
-          Other...
-        </legend>
+        </label>
+        {/* <input
+          onChange={this.props.updateForm}
+          checked={gender == }
+          name="gender"
+          type="radio"
+          value="other"
+        />
+        Other... */}
+        <legend>Destination To:</legend>
         <select name="locationTo" type="text" placeholder="Location To...">
           <option value="Los Angeles, CA">Los Angeles, CA</option>
           <option value="San Fransisco, CA">San Fransisco, CA</option>
           <option value="Austin, TX">Austin, TX</option>
         </select>
-        <legend>
-          Diet Restrictions:
-          <input name="diet" type="checkbox" value="Vegan" />
+        <legend>Diet Restrictions:</legend>
+        <label>
+          <input name="vegan" type="checkbox" value="Vegan" />
           Vegan
-          <input name="diet" type="checkbox" value="Pescetarians" />
+        </label>
+        <label>
+          <input name="pescetarians" type="checkbox" value="Pescetarians" />
           Pescetarians
-          <input name="diet" type="checkbox" value="Vegetarian" />
+        </label>
+        <label>
+          <input name="vegetarian" type="checkbox" value="Vegetarian" />
           Vegetarian
-        </legend>
+        </label>
       </form>
     );
   }
