@@ -76,15 +76,30 @@ class Form extends Component {
         </select>
         <legend>Diet Restrictions:</legend>
         <label>
-          <input name="vegan" type="checkbox" value="Vegan" />
+          <input
+            onChange={this.props.updateForm}
+            name="vegan"
+            type="checkbox"
+            checked={vegan}
+          />
           Vegan
         </label>
         <label>
-          <input name="pescetarians" type="checkbox" value="Pescetarians" />
+          <input
+            onChange={this.props.updateForm}
+            name="pescetarians"
+            type="checkbox"
+            checked={pescetarians}
+          />
           Pescetarians
         </label>
         <label>
-          <input name="vegetarian" type="checkbox" value="Vegetarian" />
+          <input
+            onChange={this.props.updateForm}
+            name="vegetarian"
+            type="checkbox"
+            checked={vegetarian}
+          />
           Vegetarian
         </label>
       </form>
