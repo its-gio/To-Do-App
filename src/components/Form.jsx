@@ -15,7 +15,7 @@ class Form extends Component {
     } = this.props.info;
 
     return (
-      <form onSubmit={this.props.alertForm}>
+      <form className="fly-list" onSubmit={this.props.alertForm}>
         <input
           onChange={this.props.updateForm}
           value={firstName}
