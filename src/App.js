@@ -37,8 +37,9 @@ class App extends Component {
 
   updateForm(e) {
     e.preventDefault();
+    const { name, value } = e.target;
     this.setState({
-      [e.target.name]: e.target.value
+      [name]: value
     });
   }
 
