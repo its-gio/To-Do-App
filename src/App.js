@@ -15,7 +15,9 @@ class App extends Component {
       gender: "",
       locationFrom: "",
       locationTo: "",
-      diet: ""
+      vegan: false,
+      pescetarians: false,
+      vegetarian: false
     };
 
     this.changeComplete = this.changeComplete.bind(this);
