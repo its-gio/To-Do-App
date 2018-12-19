@@ -19,6 +19,7 @@ class App extends Component {
     };
 
     this.changeComplete = this.changeComplete.bind(this);
+    this.updateForm = this.updateForm.bind(this);
   }
 
   changeComplete(id) {
@@ -31,6 +32,13 @@ class App extends Component {
       });
 
       return { todos: updatedTodos };
+    });
+  }
+
+  updateForm(e) {
+    e.preventDefault();
+    this.setState({
+      [e.target.name]: e.target.value
     });
   }
 
@@ -48,7 +56,7 @@ class App extends Component {
     return (
       <div>
         <form className="todo-list">{todoItems}</form>
-        <Form info={this.state} />
+        <Form updateForm={this.updateForm} info={this.state} />
       </div>
     );
   }

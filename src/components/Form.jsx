@@ -14,8 +14,20 @@ class Form extends Component {
 
     return (
       <form>
-        <input name="firstName" type="text" placeholder="First Name..." />
-        <input name="lastName" type="text" placeholder="Last Name..." />
+        <input
+          onChange={this.props.updateForm}
+          value={firstName}
+          name="firstName"
+          type="text"
+          placeholder="First Name..."
+        />
+        <input
+          onChange={this.props.updateForm}
+          value={lastName}
+          name="lastName"
+          type="text"
+          placeholder="Last Name..."
+        />
         <legend>
           Age:
           <input name="age" type="number" min="18" value={age} />
