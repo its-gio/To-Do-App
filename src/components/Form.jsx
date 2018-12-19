@@ -15,7 +15,7 @@ class Form extends Component {
     } = this.props.info;
 
     return (
-      <form>
+      <form onSubmit={this.props.alertForm}>
         <input
           onChange={this.props.updateForm}
           value={firstName}
@@ -30,6 +30,7 @@ class Form extends Component {
           type="text"
           placeholder="Last Name..."
         />
+
         <legend>Age:</legend>
         <input
           onChange={this.props.updateForm}
@@ -38,6 +39,7 @@ class Form extends Component {
           min="18"
           value={age}
         />
+
         <legend>Gender:</legend>
         <label>
           <input
@@ -69,10 +71,11 @@ class Form extends Component {
           />
           <input type="text" placeholder="Other..." />
         </label> */}
+
         <legend>Destination From:</legend>
         <select name="locationFrom">
-          <option value="" />
           <option
+            selected
             disabled={locationFrom === locationTo}
             value="Los Angeles, CA"
           >
@@ -88,6 +91,7 @@ class Form extends Component {
             Austin, TX
           </option>
         </select>
+
         <legend>Destination To:</legend>
         <select name="locationTo">
           <option value="" />
@@ -98,6 +102,7 @@ class Form extends Component {
             Los Angeles, CA
           </option>
           <option
+            selected
             disabled={locationTo === locationFrom}
             value="San Fransisco, CA"
           >
@@ -107,6 +112,7 @@ class Form extends Component {
             Austin, TX
           </option>
         </select>
+
         <legend>Diet Restrictions:</legend>
         <label>
           <input
@@ -135,6 +141,7 @@ class Form extends Component {
           />
           Vegetarian
         </label>
+        <button>Submit</button>
       </form>
     );
   }
