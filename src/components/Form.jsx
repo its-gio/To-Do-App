@@ -30,7 +30,13 @@ class Form extends Component {
         />
         <legend>
           Age:
-          <input name="age" type="number" min="18" value={age} />
+          <input
+            onChange={this.props.updateForm}
+            name="age"
+            type="number"
+            min="18"
+            value={age}
+          />
         </legend>
         <legend>
           Gender:
