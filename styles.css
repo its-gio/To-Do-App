@@ -103,3 +103,7 @@ h1 { padding: 10px 0; }
   font-size: 1.25rem;
   cursor: pointer;
 }
+
+.task-Item .recycle:hover:after {
+  color: red;
+}
