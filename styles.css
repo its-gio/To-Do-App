@@ -91,20 +91,15 @@ h1 { padding: 10px 0; }
 /* Collection */
 .task-Item {
   text-align: left;
-  position: relative;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.task-Item p{
-  padding-right: 20px;
-}
-
-.task-Item:after {
+.task-Item .recycle:after {
   content: "\267C";
-  position: absolute;
-  right: 0;
-  top: 5px;
-  cursor: pointer;
   font-size: 1.25rem;
+  cursor: pointer;
 }

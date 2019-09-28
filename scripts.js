@@ -26,14 +26,18 @@ function createListItem(e) {
   // Create p
   const p = document.createElement("p")
 
-  // Create text node for input value
-  const input = document.createTextNode(`${inputVal}`);
+  // Create recycle link
+  const a = document.createElement("a")
+  a.classList.add("recycle");
 
+  
   // Add everything togther
-  p.appendChild(input)
+  p.appendChild(document.createTextNode(`${inputVal}`))
   div.appendChild(p)
+  div.appendChild(a)
   taskList.appendChild(div);
-
+  
+  console.log(div)
   // Empty new task input
   NTInput.value = "";
 }
