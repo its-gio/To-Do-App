@@ -12,10 +12,7 @@ h1 { padding: 10px 0; }
     max-width: 500px;
     width: 100%;
     box-shadow: 5px 1px 15px #eee;
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 30px auto;
     padding: 10px;
 }
 
@@ -85,10 +82,29 @@ h1 { padding: 10px 0; }
 .tasks-area--filter {
   display: flex;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
 }
 
 .tasks-area--filter input {
   width: 100%;
 }
 
+/* Collection */
+.task-Item {
+  text-align: left;
+  position: relative;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.task-Item p{
+  padding-right: 20px;
+}
+
+.task-Item:after {
+  content: "\267C";
+  position: absolute;
+  right: 0;
+  top: 5px;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
