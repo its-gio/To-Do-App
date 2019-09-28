@@ -1,0 +1,54 @@
+/* Colors: 
+  Dark Blue: #003F87
+  Medium Blue: #226fbe
+  Light Blue: #4593e3
+ */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+input { border: 0; }
+
+#app-container {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 5px 1px 15px #eee;
+}
+
+.new-task {
+  display: flex;
+  flex-flow: column;
+}
+
+.new-task input,
+.new-task .button {
+  margin: 5px 10px;
+}
+
+.new-task input {
+  border-bottom: 1px solid #ddd;
+  transition: 200ms border-bottom-color ease-in;
+}
+
+.new-task input:focus {
+  outline: none;
+  border-bottom-color: #226fbe;
+}
+
+.new-task .button {
+  text-align: left;
+}
+
+.new-task .button button{
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: 0;
+  background: #226fbe;
+  color: #fff;
+  transition: 200ms all ease-in;
+}
+
+.new-task .button button:hover {
+  cursor: pointer;
+  background: #4593e3;
+  color: #003F87;
+}
