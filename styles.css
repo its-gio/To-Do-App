@@ -107,3 +107,15 @@ h1 { padding: 10px 0; }
 .task-item .recycle:hover:after {
   color: red;
 }
+
+.removing {
+  animation: remove 500ms;
+  display: none;
+}
+
+@keyframes remove {
+  to {
+    transform: translateX(15px);
+    opacity: 0;
+  }
+}

@@ -27,11 +27,11 @@ function createListItem(e) {
   // Create div
   const div = document.createElement("div");
   div.classList.add("task-item");
-
+  
   // Create p
   const p = document.createElement("p")
   p.classList.add("task-item--content");
-
+  
   // Create recycle link
   const a = document.createElement("a")
   a.classList.add("recycle");
@@ -62,12 +62,12 @@ function clearList() {
 function filterTasks(e) {
   const taskContent = taskList.querySelectorAll(".task-item");
   const filterInput = e.target.value;
-
+  
   taskContent.forEach(task => {
     if (task.firstChild.textContent.indexOf(filterInput) !== -1) {
-      task.classList.remove("remove");
+      task.classList.remove("removing");
     } else {
-      task.classList.add("remove");
+      task.classList.add("removing");
     }
   })
 }
