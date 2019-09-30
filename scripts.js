@@ -1,6 +1,6 @@
 const newTask = document.querySelector(".new-task");
 const NTInput = newTask.querySelector("input");
-const clearTasks = document.querySelector("#clear");
+const clearBtn = document.querySelector("#clear");
 const filter = document.querySelector(".tasks-area--filter input");
 const taskList = document.querySelector("#collection");
 
@@ -9,6 +9,8 @@ newSubmit();
 // Get value of NTInput when newTask is submitted
 function newSubmit() {
   newTask.addEventListener("submit", createListItem);
+
+  clearBtn.addEventListener("click", clearList);
 }
 
 function createListItem(e) {
@@ -37,7 +39,15 @@ function createListItem(e) {
   div.appendChild(a)
   taskList.appendChild(div);
   
-  console.log(div)
   // Empty new task input
   NTInput.value = "";
+}
+
+function clearList() {
+  if (taskList.firstChild !== null) {
+    while(taskList.firstChild !== null) { 
+      console.log(taskList.firstChild)
+      taskList.firstChild.remove();
+    } 
+  } 
 }
