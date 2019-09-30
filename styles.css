@@ -89,7 +89,7 @@ h1 { padding: 10px 0; }
 }
 
 /* Collection */
-.task-Item {
+.task-item {
   text-align: left;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
@@ -98,12 +98,12 @@ h1 { padding: 10px 0; }
   justify-content: space-between;
 }
 
-.task-Item .recycle:after {
+.task-item .recycle:after {
   content: "\267C";
   font-size: 1.25rem;
   cursor: pointer;
 }
 
-.task-Item .recycle:hover:after {
+.task-item .recycle:hover:after {
   color: red;
 }
