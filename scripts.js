@@ -20,7 +20,6 @@ function createListItem(e) {
   const inputVal = NTInput.value;
   if (inputVal.trim() === "") { return };
 
-
   // Create div
   const div = document.createElement("div");
   div.setAttribute("class", "task-Item");
@@ -31,7 +30,7 @@ function createListItem(e) {
   // Create recycle link
   const a = document.createElement("a")
   a.classList.add("recycle");
-
+  a.addEventListener("click", recycleItem)
   
   // Add everything togther
   p.appendChild(document.createTextNode(`${inputVal}`))
@@ -41,6 +40,10 @@ function createListItem(e) {
   
   // Empty new task input
   NTInput.value = "";
+}
+
+function recycleItem(e) {
+  e.target.parentElement.remove();
 }
 
 function clearList() {
