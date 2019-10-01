@@ -61,10 +61,12 @@ function clearList() {
 
 function filterTasks(e) {
   const taskContent = taskList.querySelectorAll(".task-item");
-  const filterInput = e.target.value;
+  const filterInput = e.target.value.toLowerCase();
   
   taskContent.forEach(task => {
-    if (task.firstChild.textContent.indexOf(filterInput) !== -1) {
+    const taskTL = task.firstChild.textContent.toLowerCase();
+
+    if (taskTL.indexOf(filterInput) !== -1) {
       task.classList.remove("removing");
     } else {
       task.classList.add("removing");
