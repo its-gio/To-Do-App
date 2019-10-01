@@ -58,6 +58,8 @@ function submitForm(e) {
 
 function recycleItem(e) {
   e.target.parentElement.remove();
+
+  LSRemoveTask(e.target.parentElement.textContent);
 }
 
 function clearList() {
@@ -88,6 +90,14 @@ function addToLocalStorage(inputVal) {
   let tasks = getLocalStorage();
 
   tasks.push(inputVal);
+
+  localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+function LSRemoveTask(task) {
+  let tasks = getLocalStorage();
+
+  tasks.splice(tasks.indexOf(task), 1);
 
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
