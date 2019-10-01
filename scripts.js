@@ -64,6 +64,7 @@ function clearList() {
   if (taskList.firstChild !== null) {
     while(taskList.firstChild !== null) {
       taskList.firstChild.remove();
+      localStorage.removeItem('tasks');
     }
   }
 }
@@ -101,4 +102,10 @@ function getLocalStorage() {
   }
 
   return tasks;
+}
+
+function firstLoad() {
+  let tasks = getLocalStorage();
+
+  tasks.forEach(task => createListItem(task));
 }
